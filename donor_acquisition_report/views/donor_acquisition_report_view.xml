@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- <data>
+
+        <record id="view_donor_acquisition_report_tree" model="ir.ui.view">
+            <field name="name">donor.acquisition.report.tree</field>
+            <field name="model">donor.acquisition.report</field>
+            <field name="arch" type="xml">
+                <tree string="Donor Acquisition">
+                    <field name="location"/>
+                    <field name="status"/>
+                    <field name="contact_count"/>
+                    <field name="amt_per_contact"/>
+                    <field name="total_amt_spent"/>
+                    <field name="percentage_of_reduction"/>
+                    <field name="percentage_of_aggregation"/>
+                    <field name="date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_donor_acquisition_report_form" model="ir.ui.view">
+            <field name="name">donor.acquisition.report.form</field>
+            <field name="model">donor.acquisition.report</field>
+            <field name="arch" type="xml">
+                <form string="Donor Acquisition">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="status"/>
+                                <field name="contact_count"/>
+                                <field name="amt_per_contact"/>
+                                <field name="total_amt_spent"/>
+                            </group>
+                            <group>
+                                <field name="percentage_of_reduction"/>
+                                <field name="percentage_of_aggregation"/>
+                                <field name="date"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_donor_acquisition_report_pivot" model="ir.ui.view">
+            <field name="name">donor.acquisition.report.pivot</field>
+            <field name="model">donor.acquisition.report</field>
+            <field name="arch" type="xml">
+                <pivot string="Donor Acquisition Report" disable_linking="True">
+                    <field name="status" type="row"/>
+                    <field name="date" type="col"/>
+                    <field name="contact_count" type="measure"/>
+                    <field name="amt_per_contact" type="measure"/>
+                    <field name="total_amt_spent" type="measure"/>
+                    <field name="percentage_of_reduction" type="measure"/>
+                    <field name="percentage_of_aggregation" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="action_donor_acquisition_report"
+                model="ir.actions.act_window">
+            <field name="name">Donor Acquisition Report</field>
+            <field name="res_model">donor.acquisition.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,pivot</field>
+        </record>
+
+        <menuitem
+                id="menu_donor_acquisition"
+                parent="base.menu_board_root"
+                action="action_donor_acquisition_report"
+                sequence="6"/>
+    </data> -->
+</odoo>
