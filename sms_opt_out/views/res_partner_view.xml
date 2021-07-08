@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2015-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- License URL : https://store.webkul.com/license.html/ -->
+<odoo>
+    <data>
+        <record id="view_partner_sms_optout_form" model="ir.ui.view">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <group name="container_row_2" position="inside">
+                    <group name="sms_optout" string="SMS Notification">
+                        <field name="is_global_optout"/>
+                        <field name="optout_template_ids" widget="many2many_tags" options="{'no_create': True}"/>
+                    </group>
+                </group>
+            </field>
+        </record>
+
+        <record id="view_wk_res_partner_tree" model="ir.ui.view">
+            <field name="name">wk.res.partner.tree</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <tree string="Contacts">
+                    <field name="display_name" string="name"/>
+                    <field name="phone"/>
+                    <field name="email"/>
+                    <field name="is_global_optout" string="SMS Opt-out"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_wk_res_partner_tree">
+            <field name="name">Customer</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{"search_default_customer":1}</field>
+            <field name="view_id" ref="view_wk_res_partner_tree" />
+        </record>
+
+        <menuitem id="wk_menu_res_partner" parent="base.menu_sms" action="action_wk_res_partner_tree" sequence="21"/>
+    </data>
+</odoo>

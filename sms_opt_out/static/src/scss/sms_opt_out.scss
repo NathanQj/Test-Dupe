@@ -1,0 +1,183 @@
+/* Copyright (c) 2015-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) */
+/* See LICENSE file for full copyright and licensing details. */
+/* License URL : <https://store.webkul.com/license.html/> */
+$checkbox-dia: 18px;
+$checkbox-color: #FFFFFF;
+$checkbox-select: #331EC1;
+$word-font: Montserrat;
+
+.oe_wk_optout_menu {
+    max-width: max-content;
+    padding-left: 2px;
+    a {
+        text-decoration: none;
+        color: #00A09D;
+        padding: 6px;
+        &:hover {
+            color: #005452;
+            text-decoration: underline;
+        }
+    }
+}
+
+.wk_sms_view {
+    background-color: #FFFFFF;
+    .wk_sms_content {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+.oe_wk_headings {
+    font-family: $word-font;
+    font-weight: bold;
+    .oe_wk_heading_1 {
+        font-size: 24px;
+        color: #555555;
+        padding-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+#wk_sms_opt_out_form {
+    .wk_temp_box, .wk_checkbox_content {
+        height: 65px;
+    }
+    .wk_temp_box {
+        display: flex;
+        margin: 1% 0;
+        .wk_checkbox_box {
+            box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.12);
+            width: inherit;
+            .wk_template_help {
+                position: absolute;
+                right: 19px;
+                top: 3px;
+                background: #333333;
+                cursor: pointer;
+                height: 18px;
+                width: 18px;
+                border-radius: 50%;
+                font-weight: bold;
+                color: #FFFFFF;
+                text-align: center;
+            }
+            .wk_checkbox_content {
+                border-left: 2px solid #FF8099;
+                border-radius: 2px;
+                display: flex;
+                align-items: center;
+                .wk_checkbox {
+                    position: relative;
+                    padding-left: 1.6rem;
+                    label {
+                        background: $checkbox-color;
+                        border: 1px solid #C0C0C0;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        height: $checkbox-dia;
+                        width: $checkbox-dia;
+                        position: absolute;
+                        left: 1.5rem;
+                        top: 0;
+                        &:after {
+                            border: 1px solid $checkbox-select;
+                            border-top: none;
+                            border-right: none;
+                            transform: rotate(-45deg);
+                            content: "";
+                            height: 6px;
+                            width: 11px;
+                            opacity: 0;
+                            position: absolute;
+                            left: 3px;
+                            top: 3px;
+                        }
+                    }
+                    input[type="checkbox"] {
+                        visibility: hidden;
+                        &:checked+label {
+                            background: #DED9FF;
+                            border: 1px solid $checkbox-select;
+                            &:after {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+                .oe_wk_template_name {
+                    font-family: $word-font;
+                    font-size: 16px;
+                    color: #333333;
+                    font-weight: 100;
+                    cursor: pointer;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    padding-left: 1.2rem;
+                }
+            }
+            .wk_odd_color {
+                border-left: 2px solid #C0C0C0;
+            }
+        }
+    }
+    .oe_wk_submit {
+        background: #331EC1;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+        border-radius: 2px;
+    }
+}
+
+#wk_submit_view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    .wk_submit_box {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
+        width: 392px;
+        height: 334px;
+        margin-bottom: 64px;
+        margin-top: 30px;
+        align-items: center;
+        .wk_submit_content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-bottom: 2px solid #EFEFEF;
+            padding-top: 36px;
+            img {
+                width: 134px;
+                height: 68px;
+            }
+            .wk_submit_heading {
+                font-family: Montserrat;
+                font-size: 22px;
+                color: #333333;
+                text-align: center;
+                padding-top: 8px;
+            }
+            .wk_submit_message {
+                font-family: Montserrat;
+                font-size: 16px;
+                color: #777777;
+                text-align: center;
+                line-height: 25px;
+            }
+        }
+        .wk_return_button {
+            border-radius: 2px;
+            width: 112px;
+            height: 38px;
+            padding-top: 22px;
+            a {
+                font-family: Montserrat;
+                font-size: 16px;
+            }
+        }
+    }
+}
