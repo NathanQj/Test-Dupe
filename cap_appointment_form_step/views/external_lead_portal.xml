@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+
+        <!-- Complete page of the contract -->
+        <template id="external_lead_portal" name="External Lead Detail">
+            <t t-call="portal.portal_layout">
+            <t t-set="wrapwrap_classes" t-value="'o_portal_bg_dark'" />
+                <div class="row mt16 o_portal_sidebar">
+                    <div class="col-12 col-lg">
+                        <div class="card">
+                            <div class="card-header bg-white pb-2 pt-3" style="background: white;">
+                                <div>
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                            <h1>
+                                                <span t-esc="external_lead.name" />
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </t>
+        </template>
+		
+
+    </data>
+</odoo>

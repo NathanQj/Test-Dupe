@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- UPGRADE WEBSITE APPOINTMENT CALENDAR -->
+    <template id="website_calendar_template_01" inherit_id="website_calendar.appointment_calendar" name="website_calendar_template_01">
+
+        <!-- CHANGE DATETIME DISPLAY FORMAT -->
+        <xpath expr="//a[@t-if='slot']" position="replace">
+           <t t-if="datetime.datetime.strptime(slot['datetime'], '%Y-%m-%d %H:%M:%S').hour &gt; 11">
+                <!--<t t-if="slot">-->
+                <!--    <form t-att-action="/website/calendar/#{appointment_type.id}/info2?csrf_token=#{request.csrf_token()}&amp;partner_id=#{partner and partner['id']}&amp;employee_id=#{slot['employee_id']}&amp;date_time=#{slot['datetime']}" >-->
+                <!--        <button type="submit" class="btn btn-primary">-->
+                <!--            <t t-esc="datetime.datetime.strptime(slot['datetime'], '%Y-%m-%d %H:%M:%S').strftime('%I:%M PM')"/>-->
+                <!--        </button>-->
+                <!--    </form>-->
+                <!--</t>-->
+
+                <a t-if="slot" t-attf-href="/website/calendar/info2?csrf_token=#{request.csrf_token()}&amp;partner_id=#{partner and partner['id']}&amp;app_id=#{app and app['id']}&amp;employee_id=#{slot['employee_id']}&amp;date_time=#{slot['datetime']}" t-esc="datetime.datetime.strptime(slot['datetime'], '%Y-%m-%d %H:%M:%S').strftime('%I:%M PM')"/>
+            </t>
+            <t t-else="">
+                <a t-if="slot" t-attf-href="/website/calendar/info2?csrf_token=#{request.csrf_token()}&amp;partner_id=#{partner and partner['id']}&amp;app_id=#{app and app['id']}&amp;employee_id=#{slot['employee_id']}&amp;date_time=#{slot['datetime']}" t-esc="datetime.datetime.strptime(slot['datetime'], '%Y-%m-%d %H:%M:%S').strftime('%I:%M AM')"/>
+            </t>
+        </xpath>
+
+    </template>
+
+</odoo>
