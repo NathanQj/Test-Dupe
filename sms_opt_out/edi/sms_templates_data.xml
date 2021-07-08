@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2015-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- License URL : https://store.webkul.com/license.html/ -->
+<odoo>
+    <data>
+        <record id="sms_notification.sms_template_for_delivery_done" model="sms.template">
+            <field name="portal_name">Order gets delivered</field>
+            <field name="available_for_optout" eval="True"/>
+            <field name="help">Tick this to receive automatic SMS when your order is delivered</field>
+        </record>
+
+        <record id="sms_notification.sms_template_for_invoice_payment_register" model="sms.template">
+            <field name="portal_name">Invoice payment gets registered</field>
+            <field name="available_for_optout" eval="True"/>
+            <field name="help">Tick this to receive automatic SMS when your payment is marked against your order invoice</field>
+        </record>
+
+        <record id="sms_notification.sms_template_for_invoice_validate" model="sms.template">
+            <field name="portal_name">Invoice gets validated</field>
+            <field name="available_for_optout" eval="True"/>
+            <field name="help">Tick this to receive automatic SMS when your invoice gets validated</field>
+        </record>
+
+        <record id="sms_notification.sms_template_for_order_conform" model="sms.template">
+            <field name="portal_name">Order get confirmed</field>
+            <field name="available_for_optout" eval="True"/>
+            <field name="help">Tick this to receive automatic SMS when your order is confirmed</field>
+        </record>
+
+        <record id="sms_notification.sms_template_for_order_web_creation" model="sms.template">
+            <field name="portal_name">Order placed from Website</field>
+            <field name="available_for_optout" eval="True"/>
+            <field name="help">Tick this to receive automatic SMS when your order is placed from website</field>
+        </record>
+
+        <record id="sms_notification.sms_template_for_order_web_cancel" model="sms.template">
+            <field name="portal_name">Order Canceled</field>
+            <field name="available_for_optout" eval="True"/>
+            <field name="help">Tick this to receive automatic SMS when your order is successfully canceled</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2015-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- License URL : https://store.webkul.com/license.html/ -->
+<odoo>
+    <data>
+        <record id="sms_template_sms_opt_out_form" model="ir.ui.view">
+            <field name="name">sms.template.form</field>
+            <field name="model">sms.template</field>
+            <field name="inherit_id" ref="sms_notification.sms_template_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']/../.." position="inside">
+                    <div attrs="{'invisible': [('globally_access', '=', True)]}">
+                        <label for="portal_name" class="oe_edit_only"/>
+                        <h3>
+                            <field name="portal_name" required="1"/>
+                        </h3>
+                    </div>
+                </xpath>
+                <field name="globally_access" position="after">
+                    <field name="available_for_optout" attrs="{'invisible': [('globally_access', '=', True)]}"/>
+                    <field name="help" attrs="{'invisible': [('globally_access', '=', True)]}"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

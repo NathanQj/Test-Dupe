@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>    
+		 <record model="ir.ui.view" id="v_pr1_url_redirect_url_rewrite_frm">
+                <field name="name">pr1_url_redirect.url_rewrite_form</field>
+                <field name="model">pr1_url_redirect.url_rewrite</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                 <form string="URL Rewrite">
+                 	<group>
+	                    <group string="">
+	                  <field name="src_url" required="1"/>
+	                  <field name="redirect_url" required="1"/>
+	                  <field name="generic_redirect" />
+	                  <field name="sequence" />
+	                    </group>
+	                    <group string="">
+	                        <field name="enabled" />
+	                        <field name="rewrite" />
+	                        <field name="redirect_odoo_page"/>
+	                        <field name="replace" />
+	                        <field name="exact_match" />
+	                    </group>
+	                </group>
+                 
+	             <!--    <notebook>
+		                <page string="General">
+		                        
+		                </page>
+				   	</notebook> -->
+				 </form>  	
+               	</field>
+            </record>    
+            <record model="ir.ui.view" id="v_pr1_url_redirect_url_rewrite__tre">
+                <field name="name">pr1_url_redirect.url_rewrite_tre</field>
+                <field name="model">pr1_url_redirect.url_rewrite</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree string="URL Settings">
+	      				 <field name="src_url" />
+					     <field name="redirect_url"/>
+					     <field name="rewrite" />
+	                     <field name="redirect_odoo_page"/>
+	                     <field name="replace" />
+	                     <field name="sequence" />
+	                     <field name="exact_match" />
+					     <field name="enabled" />
+					      <field name="generic_redirect" />
+					                       
+                    </tree>
+                </field>
+            </record>     
+    </data>
+</openerp>

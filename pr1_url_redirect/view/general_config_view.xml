@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>    
+		 <record model="ir.ui.view" id="v_pr1_url_redirect_general_config_frm">
+                <field name="name">pr1_url_redirect.general_config_form</field>
+                <field name="model">pr1_url_redirect.general_config</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                 <form string="General Config">
+                 	<group>
+	                    <group string="">
+	                  		<field name="force_sitemap_https"/>
+
+	                    </group>
+	                    <group string="">
+	                        <field name="multi_language_mode" />
+	                      
+	                    </group>
+	                </group>
+	                <newline/>
+	                <group>
+	                	<button name="delete_sitemap" string="Delete Sitemap" type="object" class="btn btn-sm btn-primary"/>
+			  			
+			  	
+	                </group>
+				 </form>  	
+               	</field>
+            </record>    
+            <record model="ir.ui.view" id="v_pr1_url_redirect_general_config__tre">
+                <field name="name">pr1_url_redirect.general_config_tre</field>
+                <field name="model">pr1_url_redirect.general_config</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree string="General Config">
+	      				  <field name="force_sitemap_https"/>
+					      <field name="multi_language_mode" />         
+                    </tree>
+                </field>
+            </record>     
+    </data>
+</openerp>

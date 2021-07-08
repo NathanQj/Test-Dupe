@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="merge_contacts.list">
+      <field name="name">merge_contacts list</field>
+      <field name="model">merge_contacts.merge_contacts</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="merge_contacts.action_window">
+      <field name="name">merge_contacts window</field>
+      <field name="res_model">merge_contacts.merge_contacts</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="merge_contacts.action_server">
+      <field name="name">merge_contacts server</field>
+      <field name="model_id" ref="model_merge_contacts_merge_contacts"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="merge_contacts" id="merge_contacts.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="merge_contacts.menu_1" parent="merge_contacts.menu_root"/>
+    <menuitem name="Menu 2" id="merge_contacts.menu_2" parent="merge_contacts.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="merge_contacts.menu_1_list" parent="merge_contacts.menu_1"
+              action="merge_contacts.action_window"/>
+    <menuitem name="Server to list" id="merge_contacts" parent="merge_contacts.menu_2"
+              action="merge_contacts.action_server"/>
+    -->
+  </data>
+</odoo>

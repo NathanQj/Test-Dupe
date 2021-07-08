@@ -1,0 +1,89 @@
+
+<section class="oe_container oe_dark">
+    <div class='oe_cover'>
+    <img src="icon.png" width="50px" align="middle">
+	</div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">SEO - URL Re-writer / Redirector / Custom URLS  for Website</h2>
+  
+        <div class="oe_span">
+        <h3>SEE LIVE DEMO: <a href="http://urlrewrite.pr1.xyz">CLICK HERE</a></h3>
+        	<p class='oe_mt32'>
+				Full URL Rewrite capability within Odoo. - Perfect for SEO and for migrating existing websites. 
+				<p>For our advanced SEO module with full page listing and many other features please go <a href="https://apps.odoo.com/apps/modules/10.0/pr1_advanced_seo/">here</a>
+				<br />Make pages such as /news/IT/newservers rather than have to have /page/newservers.<br />
+				<strong>Custom almost ANY URL in Odoo!!!!</strong>
+				Allows users to: 
+				<ul>
+				<li>Specify an old URL and a link to a new URL and have Odoo redirect to the new URL</li>
+				<li>Specify an Odoo /page/ or /shop/ URL or /blog url and specify a new re-written link for Odoo to re-write to.</li>
+				<li>As above however instruct Odoo to redirect all traffic from the old /page or /shop pages to the new url</li>
+                 <li><p>Force SSL on sitemap toggle - This forces the /sitemap.xml to be generated with HTTPS.</p></li>
+               
+                <li>
+                  <p>Robots file integrated with Sitemap. - Disallow rules in the robots file now remove the entries from the sitemap. *note ensure Python module: robotparser is installed.</p>
+                </li>
+				<li>
+				<p>New feature, - Generic 301 redirect! Now redirect /anything/that/might/not/exist to /anything. Perfect for redirecting old website links to odoo URLs or even re-written odoo urls.</p>
+				</ul>
+				
+				
+            
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div>
+	<h2>Screenshots</h2>
+	<div align="center">
+    <img src="Picture1.png"/><br/><br/>
+	<img src="Picture2.png"/><br/><br/>
+
+	</div>
+	<div>
+        <h2 class="oe_slogan">Instructions</h2>
+		</div>
+		<p>The url redirect can be found under Settings->Website Settings->URL Redirect Config in Odoo 8<br />
+		In Odoo 9/10 The url redirect is under Website Admin -> URL Redirect Config.
+		<br />
+		Please note you may need to give your user URL Redirect Admin Role and reload the page to see the menu item.
+		</p>
+            <p class='oe_mt32'>
+				To redirect an old page on your website for example /testing/odoo to an odoo page /page/odoo simply add src URL: /testing/odoo, redirect url: /page/odoo and tick enabled.
+				Then upon going to 'your website'/testing/odoo the system will automatically redirect with a 301 (Moved permanently) to /page/odoo.
+				</p>
+				<div>
+				<img src="rewrite0.png"/>
+				</div>
+				<p>
+				To rewrite a website page, for example /page/test to /testing/test. Simply set src url to /testing/test, redirect url to /page/test and tick rewrite. (see picture).
+				<br />If you tick redirect Odoo page then if someone tries to goto the original /page/test then it will be 301 redirected as well.
+				</p>
+				<div>
+				<img src="rewrite1.png"/>
+				</div>
+				<p>This also works with shop pages and blog pages, slide pages and forum pages!</p>
+				<div>
+				<img src="rewrite2.png"/>
+				<img src="rewrite3.png"/>
+				<img src="rewrite4.png"/>
+				<p>Generic redirect, here we are redirecting a page /i-dont/exist to the rewritten /page/advanced-seo page which has been shorthanded to its rewritten /advanced-seo.</p>
+				<img src="forum.png"/>
+				<img src="slides.png"/>
+				</div>
+				
+				<p>Finally the Sitemap.xml file is also modified with the new page entries</p>
+				<div>
+				<img src="Sitemap.png"/>
+				
+				</div>
+				<p>Please note, this module is licensed per server.</p>
+
+    </div>
+
+</section>
+

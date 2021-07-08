@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+   <data>
+     <menuitem
+            name='URL Redirect Setup'
+            id='root_pr1_url_redirect'
+            parent='website.menu_website_configuration'/>
+      
+      
+            
+        <record id="action_pr1_url_redirect" model="ir.actions.act_window">
+            <field name="name">URL Redirect Settings</field>
+            <field name="res_model">pr1_url_redirect.url_rewrite</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+            
+        <menuitem id="menu_url_redirect_configuration" 
+             parent="root_pr1_url_redirect"
+            sequence="103" action="action_pr1_url_redirect" 
+            name="URL Redirect Config"/>
+
+            
+            
+        <record id="action_pr1_url_general_config" model="ir.actions.act_window">
+            <field name="name">General Config</field>
+            <field name="res_model">pr1_url_redirect.general_config</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+            
+        <menuitem id="menu_url_redirect_general_config" 
+             parent="root_pr1_url_redirect"
+            sequence="999" action="action_pr1_url_general_config" 
+            name="General Config"/>
+   </data>
+</openerp>

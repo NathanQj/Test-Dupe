@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_donor_acquisition_report,access_donor_acquisition_report,model_donor_acquisition_report,base.group_user,1,1,1,1
+access_advertise_amount,access_advertise_amount,model_advertise_amount,base.group_user,1,1,1,1
+
